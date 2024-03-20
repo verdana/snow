@@ -1,0 +1,19 @@
+[package]
+name = "snow"
+version = "0.1.0"
+edition = "2021"
+authors = ["Verdana"]
+description = "A clear and concise replacement for GNU stow"
+license = "MIT"
+
+[dependencies]
+anyhow = "1.0.81"
+clap = { version = "4.5.4", features = ["derive"] }
+clap_builder = { version = "4.5.2", features = ["color"] }
+colorz = "1.1.2"
+dirs = "5.0.1"
+pathdiff = "0.2.1"
+serde = { version = "1.0.197", features = ["derive"] }
+shellexpand = "3.1.0"
+symlink = "0.1.0"
+toml = "0.8.12"

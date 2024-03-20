@@ -1,0 +1,9 @@
+edition = "2021"
+color = "Always"
+newline_style = "Unix"
+enum_discrim_align_threshold = 20
+struct_field_align_threshold = 20
+merge_imports = true
+group_imports = "StdExternalCrate"
+use_small_heuristics = "default"
+use_try_shorthand = true
