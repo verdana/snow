@@ -191,7 +191,9 @@ fn link_package(
 
                 // if target does not exist, create the symbolic link
                 if !target.exists() {
-                    let _ = make_symlink(&path1, &target, pkg_name);
+                    if let Err(e) = make_symlink(&path1, &target, pkg_name) {
+                        eprintln!("{}", e);
+                    }
                     continue;
                 }
             }
@@ -201,7 +203,9 @@ fn link_package(
                 if target.exists() && (!force || fs::remove_file(&target).is_err()) {
                     continue;
                 }
-                let _ = make_symlink(&path1, &target, pkg_name);
+                if let Err(e) = make_symlink(&path1, &target, pkg_name) {
+                    eprintln!("{}", e);
+                }
                 continue;
             }
         }
