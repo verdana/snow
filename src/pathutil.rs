@@ -6,6 +6,7 @@ use std::{
 
 use anyhow::{bail, Ok};
 
+/// Calculate the relative path from path1 to path2
 pub(crate) fn relative(path1: &str, path2: &str) -> anyhow::Result<String> {
     let abs_path1 = Path::new(path1);
     let abs_path2 = Path::new(path2);
