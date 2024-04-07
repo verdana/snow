@@ -86,7 +86,7 @@ fn main() -> anyhow::Result<()> {
             if packages.is_empty() {
                 bail!("No packages specified")
             }
-            if let Err(e) = unlink_packages(&packages, force) {
+            if let Err(e) = unlink_packages(packages, force) {
                 eprintln!("{}", e);
             }
             Ok(())
