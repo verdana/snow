@@ -66,7 +66,8 @@ pub(crate) fn is_same_file(file1: &Path, file2: &Path) -> anyhow::Result<bool> {
     Ok(result)
 }
 
-/// Get the real path of the symlink and join it with the directory path of the symlink
+/// Get the real path of the symlink and join it with the directory path of the
+/// symlink
 pub fn get_symlink_real_path(link: &str) -> anyhow::Result<PathBuf> {
     let filepath = Path::new(link);
     let realpath = fs::read_link(filepath)?;

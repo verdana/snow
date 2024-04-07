@@ -1,7 +1,8 @@
+use std::{env, fs, path::Path};
+
 use anyhow::bail;
 use clap::{Parser, Subcommand};
 use colorz::Colorize;
-use std::{env, fs, path::Path};
 
 mod lockfile;
 mod pathutil;
